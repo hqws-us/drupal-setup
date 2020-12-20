@@ -1,0 +1,26 @@
+/.idea
+/vendor
+/.editorconfig
+/.gitattributes
+
+
+web/core/
+web/libraries/
+web/modules/contrib/
+web/profiles/contrib/
+web/themes/contrib/
+web/.ht.router.php
+web/.gitignore
+web/*/.gitignore
+web/*/*/.gitignore
+
+# Ignore Drupal's file directory
+web/files
+web/sites/*/files
+web/sites/*/files/private
+
+# Ignore local settings.
+web/sites/default/settings.local.php
+web/sites/default/services.local.yml
+/web/sites/example.settings.local.php
+/web/sites/example.sites.php

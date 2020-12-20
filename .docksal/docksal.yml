@@ -1,0 +1,54 @@
+version: "2.1"
+
+services:
+  cli:
+#    image: ${COMPOSE_PROJECT_NAME_SAFE}_cli
+#    build: services/cli
+#    volumes:
+#      - ${PROJECT_ROOT}/.docksal/tmp:/tmp
+    environment:
+      - PHP_IDE_CONFIG=serverName=${VIRTUAL_HOST}
+  db:
+    ports:
+      - ${MYSQL_PORT_MAPPING}
+
+#  #Xhprof
+#  xhprof:
+#    hostname: xhprof
+#    image: tuimedia/xhprof-docker
+#    environment:
+#      - PROFILER_SUFFIX=*.xhprof
+#    volumes:
+#      - ${PROJECT_ROOT}/.docksal/tmp:/profiles
+#    labels:
+#    labels:
+#      - io.docksal.virtual-host=xhprof.${VIRTUAL_HOST}
+#    dns:
+#      - ${DOCKSAL_DNS1}
+#      - ${DOCKSAL_DNS2}
+
+  # Solr
+#  solr:
+#    hostname: solr
+#    image: docksal/solr:6.6-2.1
+#    environment:
+#      - SOLR_DEFAULT_CONFIG_SET=search_api_solr_8.x-2.5
+#    volumes:
+#      - ${PROJECT_ROOT}/.docksal/etc/solr:/opt/solr/server/solr/stage_core:ro
+#    labels:
+#      - io.docksal.virtual-host=solr.${VIRTUAL_HOST}
+#      - io.docksal.virtual-port=8983
+#    dns:
+#      - ${DOCKSAL_DNS1}
+#      - ${DOCKSAL_DNS2}
+
+  # PHPMyAdmin
+  pma:
+    hostname: pma
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_HOST=db
+      - PMA_USER=root
+      - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD:-root}
+    labels:
+      - io.docksal.virtual-host=pma-${VIRTUAL_HOST}

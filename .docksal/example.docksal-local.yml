@@ -1,0 +1,7 @@
+# This is a local configuration file that is used own needs.
+# To override a variable locally:
+# - Copy variables from .docksal/docksal.yml file to this one and overrides variables.
+#
+# After editing, apply changes with 'fin up'
+
+version: "2.1"
