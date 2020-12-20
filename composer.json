@@ -22,9 +22,12 @@
     ],
     "require": {
         "composer/installers": "^1.2",
+        "drupal/admin_toolbar": "^2.4",
+        "drupal/bootstrap_barrio": "^5.1",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
-        "drupal/core-recommended": "^8.8"
+        "drupal/core-recommended": "^8.8",
+        "drupal/gin": "^3.0@alpha"
     },
     "conflict": {
         "drupal/drupal": "*"
