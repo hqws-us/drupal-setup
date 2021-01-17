@@ -1,5 +1,5 @@
 {
-    "name": "bladeaweb/clear-drupal-8",
+    "name": "bladeaweb/drupal-8",
     "description": "Project template for Drupal 8 projects with a relocated document root",
     "type": "project",
     "license": "GPL-2.0-or-later",
@@ -18,16 +18,23 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
         "composer/installers": "^1.2",
         "drupal/admin_toolbar": "^2.4",
         "drupal/bootstrap_barrio": "^5.1",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-project-message": "^8.8",
-        "drupal/core-recommended": "^8.8",
+        "drupal/core-composer-scaffold": "^8.9",
+        "drupal/core-project-message": "^8.9",
+        "drupal/core-recommended": "^8.9",
         "drupal/gin": "^3.0@alpha"
+    },
+    "require-dev": {
+        "drupal/console": "^1.9"
     },
     "conflict": {
         "drupal/drupal": "*"
